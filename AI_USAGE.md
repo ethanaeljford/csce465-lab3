@@ -10,12 +10,12 @@ Assistance with CSCE 465 HW3: Building and testing the files for the buffer over
 - chat_log.txt
 
 ## What I used
-AI assistance contributed to all four Python deliverables:
-- `baseline_ctr.py` — Task 1: AES-CTR malleability (bit-flip) and replay demo.
-- `handshake.py` — Task 2: authenticated ffdhe3072 Diffie–Hellman handshake with RSA-PSS signatures.
-- `secure_record.py` — Task 3: Encrypt-then-MAC record layer (AES-256-CTR + HMAC-SHA256).
-- `test_security.py` — Task 4: adversarial `unittest` suite exercising both modules.
-
+AI assistance contributed to the following HW3 deliverables:
+- `legacy_log_parser.c` — Task 1: intentionally vulnerable ret2win C program (unchecked `memcpy` into a 128-byte stack buffer; non-inlined `win()` that writes a marker and attempts the decoy read). Code copied verbatim from the AI output, then modified by me to add the decoy read back in.
+- `legacy-parser.sh` — Task 2: OpenClaw skill wrapper enforcing the `inbox/`-only access-control boundary (canonicalize path, containment check, refuse otherwise).
+- `SKILL.md` — Task 2: skill definition carrying the anti-injection stance (treat external content as data, not instructions).
+- `injection_awareness_demo.html` — Task 2: inert adversarial webpage demonstrating three indirect-prompt-injection vectors against a harmless marker, then I added the call for the legacy_parcer skill after. 
+  
 ## What I changed
 For the C file, the part of the win() function that looks for the decoy file was not there at first so I added that in the same form the AI made the first half of the win() function. The HTML file was made safe originally by the AI but I added the part that explicitly asks the AI to fun the legacy_parcer skill on the payload file in the html file. 
 
