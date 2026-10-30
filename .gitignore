@@ -1,0 +1,4 @@
+legacy_log_parser
+*.bin
+core
+*.o
