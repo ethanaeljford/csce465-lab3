@@ -7,7 +7,7 @@ Claude (Anthropic). Used October 28–29, 2026, across two chat sessions: one se
 Assistance with CSCE 465 HW3: Building and testing the files for the buffer overlow c file, the html file, and the claude skill code files. All design requirements came from the assignment; final review, testing, and the written report are my own.
 
 ## AI Conversation Log file
-- chat_log.txt
+- chat_log_ford.txt
 
 ## What I used
 AI assistance contributed to the following HW3 deliverables:
