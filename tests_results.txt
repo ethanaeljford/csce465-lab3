@@ -1,0 +1,12 @@
+PASS: valid short input (exit 0)
+      output: [parse] copied 10 byte(s); log begins: hello log
+PASS: exactly max (128 bytes) (exit 0)
+      output: [parse] copied 128 byte(s); log begins: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+PASS: one byte over (129 bytes) (exit 1)
+      output: [parse] REJECTED: input is 129 bytes, max allowed is 128
+PASS: missing file (exit 2)
+      output: [parse] cannot open file: No such file or directory
+PASS: original exploit payload (exit 1)
+      output: [parse] REJECTED: input is 160 bytes, max allowed is 128
+PASS: marker NOT created
+== 6 passed, 0 failed ==
